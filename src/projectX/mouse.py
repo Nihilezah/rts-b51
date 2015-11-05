@@ -64,3 +64,9 @@ class Mouse(object):
                 if not obj.moving:
                     self.parent.movingUnits.append(obj)
                     obj.moving = True
+
+        if logic.mouse.events[logic.KX_MOUSE_BUT_MIDDLE] == logic.KX_INPUT_JUST_ACTIVATED:
+            scene.objects['SpawnP'].worldPosition.x = mousePos.hitPosition[0]  # + 1.5 # for isometric cam... weird
+            scene.objects['SpawnP'].worldPosition.y = mousePos.hitPosition[1]    - 1
+            scene.objects['Spawn_Circle'].worldPosition.x = mousePos.hitPosition[0]
+            scene.objects['Spawn_Circle'].worldPosition.y = mousePos.hitPosition[1]

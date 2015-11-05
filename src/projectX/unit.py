@@ -12,6 +12,7 @@ class Unit(bge.types.KX_GameObject):
         self.speed = 0.1
         self.destination = []
         self.moving = False
+        self.id_nb = "Unit_" + str(bge.c.count)
 
     def move(self, x, y):
         """not using the blender sensors and logic brick, thats the python way bitch! :P"""
